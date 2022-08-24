@@ -1,12 +1,12 @@
 const now = new Date();
 const test = new Date();
 
-// 1. It is a date?
+// 1. It is an instance of Date.
 
 // 2. The "now" variable type is an object.
 //      console.log(typeof now);
 
-// 3. The date is Wed Aug 24 2022 15:03:21 GMT+0200 (Central European Summer Time)
+// 3. The date is a built-in Class.
 //      console.log(Date());
 
 // 4. "Date" type is a function.
@@ -27,8 +27,10 @@ console.log(Date);
 //  when I console.log(new Date())
 console.log(new Date());
 
-// 8. No, it is not.
-console.log(now === true);
+// 8. Yes
+if (now) {
+  console.log("This is true");
+}
 
 // 9. You get false because
 console.log(now === test);
@@ -39,5 +41,5 @@ console.log(now === Date);
 // 11. You get false.
 console.log(now === new Date());
 
-// 12. You get false because
+// 12. You get false because you are comparing two different object references (even if both objects contain the exact same properties).
 console.log(new Date() === new Date());
